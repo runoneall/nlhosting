@@ -80,7 +80,7 @@ func createNew(server, email, domain string) {
 			return
 		}
 
-		if resp.Total > total {
+		if resp.Total >= total {
 			SendMail(email, "未能完成创建请求", "由于服务器名额已满，未能完成您的创建请求")
 			return
 		}
