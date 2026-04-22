@@ -27,5 +27,5 @@ func main() {
 	api.ServeAPI(r)
 	www.ServeWWW(r)
 
-	r.Run(cfg.Config.Serve)
+	r.RunTLS(cfg.Config.Serve, "cert.pem", "key.pem")
 }
